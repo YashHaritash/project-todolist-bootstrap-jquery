@@ -13,6 +13,8 @@
             margin: 20px; /* Adding margin to the body */
         }
     </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"></script>
+    <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
 </head>
 <body>
@@ -20,36 +22,49 @@
         <h1 align="center">Todo List</h1>
     </div> 
 
-    <!-- Input Box -->
+    
     <div class="row">
-        <div class="col">
+        <!-- Input Box -->
+        <div class="col-md-7">
             <div class="form-group">
                 <label for="inpNewTask">New Task</label>
                 <input type="text" class="form-control" id="inpNewTask" aria-describedby="newTaskHelp" placeholder="Enter New Task">
                 <small id="newTaskHelp" class="form-text text-muted">A short one line description of your task</small>
             </div>
         </div>
+        <!-- Buttons -->
+        <div class="col-md-5 row">
+            <div class="col-12 col-sm-3 col-md-6 p-1">
+                <button class="btn btn-success col" disabled id="btnAdd">
+                    <i class="fa fa-plus"></i> Add 
+                </button>
+            </div>
+            <div class="col-12 col-sm-3 col-md-6 p-1">
+                <button class="btn btn-danger col " disabled id="btnClear">
+                    <i class="fa-solid fa-arrows-rotate"></i> Clear 
+                </button>
+            </div>
+            <div class="col-12 col-sm-3 col-md-6 p-1">
+                <button class="btn btn-info col " disabled id="btnSort">
+                    <i class="fa-solid fa-sort"></i> Sort 
+                </button>
+            </div>
+            <div class="col-12 col-sm-3 col-md-6 p-1">
+                <button class="btn btn-warning col " disabled id="btnCleanUp">
+                    <i class="fa-solid fa-eraser"></i> CleanUp 
+                </button>
+            </div>
+
+        </div>
     </div>
 
-    <!-- Buttons -->
-    <div class="row px-4 " >
-            <button class="btn btn-success col m-2" id="btnAdd">
-                Add
-            </button>
-
-            <button class="btn btn-danger col m-2" id="btnClear">
-                Clear
-            </button>
-
-    </div>
+    
+    
 
     <!-- Task List -->
     <ul class="list-group row m-2" id="ulTasks">
-        <li class="list-group-item">Cras justo odio</li>
-        <li class="list-group-item">Dapibus ac facilisis in</li>
-        <li class="list-group-item">Morbi leo risus</li>
-        <li class="list-group-item">Porta ac consectetur ac</li>
-        <li class="list-group-item">Vestibulum at eros</li>
+
+       
       </ul>
 </body>
 </html>
