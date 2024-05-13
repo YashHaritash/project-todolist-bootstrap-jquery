@@ -12,6 +12,12 @@ btnSort.click(()=>{
 
 })
 btnAdd.click(()=>{
+    if(inpNewTask.val() == 0){
+        inpNewTask.val('');
+        toggleAddBtn(false);
+        toggleClearBtn(false);
+        return;
+    }
     let listItem = $(`<li class="list-group-item">${inpNewTask.val()}</li>`);
     ulTasks.append(listItem);
     listItem.click(()=>{
