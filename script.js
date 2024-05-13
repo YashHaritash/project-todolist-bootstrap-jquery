@@ -16,6 +16,8 @@ btnAdd.click(()=>{
         inpNewTask.val('');
         toggleAddBtn(false);
         toggleClearBtn(false);
+
+        inpNewTask.focus();
         return;
     }
     let listItem = $(`<li class="list-group-item">${inpNewTask.val()}</li>`);
@@ -28,6 +30,8 @@ btnAdd.click(()=>{
     toggleClearBtn(false);
     toggleSortBtn();
     toggleCleanUpBtn();
+    inpNewTask.focus();
+
     
 })
 
